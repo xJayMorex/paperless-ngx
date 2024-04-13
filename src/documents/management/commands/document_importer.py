@@ -94,8 +94,7 @@ class Command(BaseCommand):
                     )
                     break
         if (
-            User.objects.exclude(username__in=["consumer"]).count()
-            != 0
+            User.objects.exclude(username__in=["consumer"]).count() != 0
         ):
             self.stdout.write(
                 self.style.WARNING(
